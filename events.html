@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="preasureisland.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Courgette&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300&family=Dancing+Script&family=Indie+Flower&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e71353e8a7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e71353e8a7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <img class="header__logo" src="img/city.png" alt="iconic view of a cityscape">
+            <h1 class="header__title">
+                Pleasure Island
+            </h1>
+        </div>
+    </header>
+
+    <div class="topnav" id="myTopnav">
+        <a href="preasureisland.html" class="active">MEMBER DIRECTORY</a>
+        <a href="events.html">EVENTS</a>
+        <a href="eat.html">WHERE TO EAT</a>
+        <a href="guide.html">AREA GUIDE</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div style="padding-left:16px">
+        <h1> Events
+        </h1>
+        <p> Carolina & Kure Beach, NC </p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="img/island.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="img/hamock.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="img/gitar.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <body>
+
+        <h2>Carolina Beach Events In 2022</h2>
+
+        <main class="grid">
+            <div class="one">
+                <h3> Carolina Beach Events In 2022 </h3><br>
+                <h4>Carolina Beach is a beautiful place to visit during any season, especially with a variety of
+                    festivals and events happening throughout the year. </h4>
+            </div>
+
+            <div class="two">
+                <h3> Spring Events in Carolina Beach
+                </h3>
+
+                <h4>Every Tuesday this spring starting at 8:00 p.m., the Cape Fear Blues Society will host Blues Jam at
+                    The Rusty Nail in Wilmington, NC. You’re welcome to sit back, relax and just enjoy the jams . </h4>
+            </div>
+
+            <div class="three">
+                <h3>Carolina Beach Farmers’ Market</h3><br>
+                <img src="img/retriever350.jpg" srcset="img/retriever350.jpg   350w,
+                      img/retriever300.jpg  300w,
+                      img/retriever250.jpg  250w" ; sizes="22vw" alt="Golden Retriever">
+            </div>
+
+            <div class="four">
+                <h3>Summer Movies at the Lake</h3><br>
+                <img src="img/beagle350.jpg" srcset="img/beagle350.jpg   350w,
+                      img/beagle300.jpg  300w,
+                      img/beagle250.jpg  250w" ; sizes="22vw" alt="Beagle Dog">
+            </div>
+
+            <div class="five">
+                <h3>Fall Events in Carolina Beach
+                </h3><br>
+                <h4>The Oak Island Art Guild hosts this year’s Annual Arts and Crafts Festival featuring more than 100
+                    vendors selling their locally-made arts and crafts in categories including pottery. </h4>
+            </div>
+
+            <div class="six">
+                <h3>Annual Arts & Crafts Festival </h3><br>
+                <img src="img/husky350.jpg" srcset="img/husky350.jpg   350w,
+                      img/Husky300.jpg  300w,
+                      img/Husky250.jpg  250w" ; sizes="22vw" alt="Golden Retriever">
+
+            </div>
+
+
+
+
+
+            </div>
+
+
+        </main>
+
+       
+        <h2>Cape Fear Fair & Expo – October 28 – November 6, 2022</h2>
+           <p>The Cape Fear Fair & Expo will return to the Wilmington International Airport in 2022 for its 57th annual
+            event. Your kids will go wild over the family-friendly fair attractions and activities including educational
+            agricultural magic shows, petting zoos, a Victorian-style circus, a comedy hypnotist and much more. Peruse
+            judged exhibits in several categories including agriculture, arts and crafts, entomology, baked goods,
+            livestock and more. Don’t forget the fair rides and expectant festival foods. The fair and expo is located
+            just 30 minutes from the Golden Sands Beach Resort.</p>
+
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <hr>
+
+
+        <footer>
+
+            <p> Copyright Pleasure Island Chamber of Commerce. All Rights Reserved.</p>
+            <p>1121 N Lake Park Blvd. | Carolina Beach, NC 28428</p>
+            <p>Phone: (910) 458-8434 | info@domain.com | sitemap</p>
+
+
+
+            </ul>
+
+        </footer>
+
+    </body>
+
+</html>

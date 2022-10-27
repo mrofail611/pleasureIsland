@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="preasureisland.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Courgette&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300&family=Dancing+Script&family=Indie+Flower&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e71353e8a7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e71353e8a7.js" crossorigin="anonymous"></script>
+</head>
+<header class="header">
+    <div class="header__inner">
+        <img class="header__logo" src="img/city.png" alt="iconic view of a cityscape">
+        <h1 class="header__title">
+            Pleasure Island
+        </h1>
+    </div>
+</header>
+
+<div class="topnav" id="myTopnav">
+    <a href="preasureisland.html" class="active">MEMBER DIRECTORY</a>
+    <a href="events.html">EVENTS</a>
+    <a href="eat.html">WHERE TO EAT</a>
+    <a href="guide.html">AREA GUIDE</a>
+    <a href="contact.html">CONTACT US</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<div style="padding-left:16px">
+    <h1> AREA GUIDE
+    </h1>
+    <p> Things To Do In Carolina Beach, NC </p>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+
+
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/aquarium.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/freeman.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/palm.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+<body>
+
+    <h2>Carolina Beach Events In 2022</h2>
+
+    <main class="grid">
+        <div class="one">
+            <h3>Carolina Beach Boardwalk </h3><br>
+            <h4>Enjoy the sights and sounds of Carolina Beach when you visit the Carolina Beach Boardwalk. Located
+                oceanfront, this popular hub for fun and excitement boasts a Ferris wheel, arcade, restaurants, shopping
+                and seasonal concerts & festivals. </h4>
+        </div>
+
+        <div class="two">
+            <h3> North Carolina Aquarium at Fort Fisher
+            </h3>
+
+            <h4>Discover exotic creatures from the land and sea at the North Carolina Aquarium at Fort Fisher. Exhibits
+                include animals from freshwater streams and swamps to fish from tropical coral reefs from around the
+                world. </h4>
+        </div>
+
+        <div class="three">
+            <h3>Carolina Beach Fishing Pier</h3><br>
+            <img src="img/fishing350.jpg" srcset="img/fishing350.jpg   350w,
+                  img/fishing300.jpg  300w,
+                  img/fishing250.jpg  250w" ; sizes="22vw" alt="Golden Retriever">
+        </div>
+
+        <div class="four">
+            <h3>
+                Carolina Beach State Park</h3><br>
+            <img src="img/statepark350.jpg" srcset="img/statepark350.jpg   350w,
+            img/statepark300.jpg  300w,
+            img/statepark250.jpg  250w" ; sizes="22vw" alt="Beagle Dog">
+        </div>
+
+        <div class="five">
+            <h3>Freeman Park
+            </h3><br>
+            <h4>reeman Park is a stretch of beautiful Carolina Beach where 4×4 wheels are permitted to drive onto the
+                beach for boating, fishing, camping, surfing, swimming and more. Visitors love to see the variety of
+                wildlife and plant life along the beaches and dunes that are indigenous to the area. </h4>
+        </div>
+
+        <div class="six">
+            <h3>
+                Salty Dog Yoga & Surf </h3><br>
+            <img src="img/yoga350.jpg" srcset="img/yoga350.jpg   350w,
+                  img/yoga300.jpg  300w,
+                  img/yoga250.jpg.jpg  250w" ; sizes="22vw" alt="Golden Retriever">
+
+        </div>
+
+
+
+
+
+        </div>
+
+
+    </main>
+
+
+    
+    <h2>Things To Do In Carolina Beach, NC</h2>
+    <p>Golden Sands Beach Resort is centrally located near many Carolina Beach attractions and activities. Explore
+        exotic ocean reefs at the North Carolina Aquarium in Fort Fisher or ascend above the waves on a beachfront
+        Ferris wheel ride at the Carolina Beach Boardwalk. Discover everything our NC beach town has to offer with our
+        list of the best things to do in Carolina Beach including attractions, shopping, dining and water sports..</p>
+
+
+
+    <body>
+
+        <h2>AREA INFORMATION</h2>
+
+        <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+        <div class="custom-select" style="width:200px;">
+          <select>
+            <option value="0">Select One:</option>
+            <option value="1">Carolina Beach Boardwalk</option>
+            <option value="2">Carolina Beach Lake</option>
+            <option value="3">Carolina Beach State Lake</option>
+            <option value="4">Fort Fisher Aquarium</option>
+            <option value="5">Freeman Park</option>
+            <option value="6">Pleasure Island Parks</option>
+            <option value="7">USS NC Battleship</option>
+            <option value="8">Beach Weddings</option>
+            
+          </select>
+        </div>
+        
+        <script>
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        /*look for any elements with the class "custom-select":*/
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+          selElmnt = x[i].getElementsByTagName("select")[0];
+          ll = selElmnt.length;
+          /*for each element, create a new DIV that will act as the selected item:*/
+          a = document.createElement("DIV");
+          a.setAttribute("class", "select-selected");
+          a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+          x[i].appendChild(a);
+          /*for each element, create a new DIV that will contain the option list:*/
+          b = document.createElement("DIV");
+          b.setAttribute("class", "select-items select-hide");
+          for (j = 1; j < ll; j++) {
+            /*for each option in the original select element,
+            create a new DIV that will act as an option item:*/
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function(e) {
+                /*when an item is clicked, update the original select box,
+                and the selected item:*/
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                  if (s.options[i].innerHTML == this.innerHTML) {
+                    s.selectedIndex = i;
+                    h.innerHTML = this.innerHTML;
+                    y = this.parentNode.getElementsByClassName("same-as-selected");
+                    yl = y.length;
+                    for (k = 0; k < yl; k++) {
+                      y[k].removeAttribute("class");
+                    }
+                    this.setAttribute("class", "same-as-selected");
+                    break;
+                  }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+          }
+          x[i].appendChild(b);
+          a.addEventListener("click", function(e) {
+              /*when the select box is clicked, close any other select boxes,
+              and open/close the current select box:*/
+              e.stopPropagation();
+              closeAllSelect(this);
+              this.nextSibling.classList.toggle("select-hide");
+              this.classList.toggle("select-arrow-active");
+            });
+        }
+        function closeAllSelect(elmnt) {
+          /*a function that will close all select boxes in the document,
+          except the current select box:*/
+          var x, y, i, xl, yl, arrNo = [];
+          x = document.getElementsByClassName("select-items");
+          y = document.getElementsByClassName("select-selected");
+          xl = x.length;
+          yl = y.length;
+          for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+              arrNo.push(i)
+            } else {
+              y[i].classList.remove("select-arrow-active");
+            }
+          }
+          for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+            }
+          }
+        }
+        /*if the user clicks anywhere outside the select box,
+        then close all select boxes:*/
+        document.addEventListener("click", closeAllSelect);
+        </script>
+        
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <hr>
+
+
+        <footer>
+
+            <p> Copyright Pleasure Island Chamber of Commerce. All Rights Reserved.</p>
+            <p>1121 N Lake Park Blvd. | Carolina Beach, NC 28428</p>
+            <p>Phone: (910) 458-8434 | info@domain.com | sitemap</p>
+
+
+
+            </ul>
+
+        </footer>
+
+    </body>
+
+</html>

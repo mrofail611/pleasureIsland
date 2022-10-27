@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="preasureisland.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Courgette&family=Pacifico&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,300&family=Dancing+Script&family=Indie+Flower&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e71353e8a7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e71353e8a7.js" crossorigin="anonymous"></script>
+  
+</head>
+<header class="header">
+    <div class="header__inner">
+      <img class="header__logo" src="img/city.png" alt="iconic view of a cityscape">
+      <h1 class="header__title">
+        Pleasure Island
+      </h1>
+    </div>
+  </header>
+  
+  <div class="topnav" id="myTopnav">
+    <a href="preasureisland.html" class="active">MEMBER DIRECTORY</a>
+    <a href="events.html">EVENTS</a>
+    <a href="eat.html">WHERE TO EAT</a>
+    <a href="guide.html">AREA GUIDE</a>
+   <a href="contact.html">CONTACT US</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+  <h1>Restaurants in Carolina Beach</h1>
+  <hr>
+  
+  <h2>Where to Eat</h2>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  
+  
+  <div id="myBtnContainer">
+    <button class="btnn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btnn" onclick="filterSelection('nature')"> Fast Food</button>
+    <button class="btnn" onclick="filterSelection('cars')"> Meals</button>
+  
+  </div>
+  
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column nature">
+      <div class="content">
+        <img src="img/fast1.jfif" alt="Mountains" style="width:100%">
+        <h4>Fast food</h4>
+        <p>Chicken sandwiches</p>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="img/noodles.jpg" alt="Lights" style="width:100%">
+        <h4>Fast food</h4>
+        <p>noodles</p>
+      </div>
+    </div>
+    <div class="column nature">
+      <div class="content">
+      <img src="img/fast4.jfif" alt="Nature" style="width:100%">
+        <h4>Fast food</h4>
+        <p>Pizza</p>
+      </div>
+    </div>
+    
+    <div class="column cars">
+      <div class="content">
+        <img src="img/soup.jfif" alt="Car" style="width:100%">
+        <h4>Meals</h4>
+        <p>Soups</p>
+      </div>
+    </div>
+    <div class="column cars">
+      <div class="content">
+      <img src="img/meat.jfif" alt="Car" style="width:100%">
+        <h4>Meals</h4>
+        <p>Meat</p>
+      </div>
+    </div>
+    <div class="column cars">
+      <div class="content">
+      <img src="img/spag.jfif" alt="Car" style="width:100%">
+        <h4>Meals</h4>
+        <p>Chicken</p>
+      </div>
+    </div>
+   
+
+   
+  
+    
+  
+  <!-- END MAIN -->
+  </div>
+  
+  <script>
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("column");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+  </script>
+
+
+<p>Search for Restaurants:</p>
+
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+<body>
+
+    <a href="#" class="fa fa-facebook"></a>
+  <a href="#" class="fa fa-twitter"></a>
+  <a href="#" class="fa fa-google"></a>
+  <a href="#" class="fa fa-linkedin"></a>
+  <hr>
+
+
+
+  <footer>
+
+    <p> Copyright Pleasure Island Chamber of Commerce. All Rights Reserved.</p>
+    <p>1121 N Lake Park Blvd. | Carolina Beach, NC 28428</p>
+    <p>Phone: (910) 458-8434 | info@domain.com | sitemap</p>
+
+
+
+    </ul>
+
+  </footer>
+
+    
+</body>
+</html>
